@@ -18,6 +18,7 @@ const ContactList = () => {
     dispatch(fetchContacts());
   }, [dispatch]);
 
+  const handleDeleteContact = contactId => dispatch(deleteContact(contactId));
   return (
     <ul>
       {isLoading && !error && <Loading>Request in progress...</Loading>}
@@ -26,7 +27,7 @@ const ContactList = () => {
         return (
           <Item key={contact.id}>
             {contact.name}: {contact.number}
-            <button onClick={() => dispatch(deleteContact(contact.id))}>
+            <button onClick={() => handleDeleteContact(contact.id)}>
               Delete
             </button>
           </Item>

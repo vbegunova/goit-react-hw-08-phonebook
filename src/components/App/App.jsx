@@ -13,6 +13,7 @@ const Home = lazy(() => import('pages/Home'));
 const Contacts = lazy(() => import('pages/Contacts'));
 const LoginPage = lazy(() => import('pages/Login'));
 const RegisterPage = lazy(() => import('pages/Register'));
+const NotFound = lazy(() => import('pages/NotFound'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -53,6 +54,7 @@ export const App = () => {
               />
             }
           />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </Container>

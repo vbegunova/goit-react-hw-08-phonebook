@@ -46,7 +46,7 @@ const contactsSlice = createSlice({
       .addCase(addContact.pending, handlePending)
       .addCase(addContact.fulfilled, handleAddFulfilled)
       .addCase(addContact.rejected, handleRejected)
-      .addCase(deleteContact.pending, handleDeleteFulfilled)
+      .addCase(deleteContact.pending, handlePending)
       .addCase(deleteContact.fulfilled, handleDeleteFulfilled)
       .addCase(deleteContact.rejected, handleRejected),
 });
